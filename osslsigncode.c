@@ -875,7 +875,12 @@ static void cleanup_lib_state(void)
 #endif
 	OBJ_cleanup();
 #ifndef OPENSSL_NO_ENGINE
+	fprintf(stderr, "\nEngine CleanUP ******************** \n");
 	ENGINE_cleanup();
+	fprintf(stderr, "\nEngine Free ******************** \n");
+	ENGINE_free();
+	fprintf(stderr, "\Open SSL CleanUP ******************** \n");
+	OPENSSL_cleanup();
 #endif
 	EVP_cleanup();
 	CONF_modules_free();
