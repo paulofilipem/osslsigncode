@@ -879,7 +879,7 @@ static void cleanup_lib_state(void)
 	ENGINE_cleanup();
 	fprintf(stderr, "\nEngine Free ******************** \n");
 	ENGINE_free();
-	fprintf(stderr, "\Open SSL CleanUP ******************** \n");
+	fprintf(stderr, "\nOpen SSL CleanUP ******************** \n");
 	OPENSSL_cleanup();
 #endif
 	EVP_cleanup();
