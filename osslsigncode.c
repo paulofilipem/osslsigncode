@@ -3378,7 +3378,7 @@ int main(int argc, char **argv) {
 				if (1 != ENGINE_ctrl_cmd(dyn, "LOAD", 1, NULL, NULL, CMD_MANDATORY))
 					DO_EXIT_0("Failed to set dyn LOAD to '1'\n");
 
-				if (1 != ENGINE_ctrl_cmd(dyn, "FORCE_LOGIN", 1, NULL, NULL, CMD_FORCE_LOGIN))
+				if (1 != ENGINE_ctrl_cmd(dyn, "FORCE_LOGIN", 1, NULL, NULL, CMD_MANDATORY))
 					DO_EXIT_0("Failed to set dyn FORCE_LOGIN to '1'\n");
 			} else
 				ENGINE_load_builtin_engines();
